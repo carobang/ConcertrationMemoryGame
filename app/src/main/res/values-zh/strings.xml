@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Noah\'s Ark</string>
+    <string name="start">开始</string>
+    <string name="count">计数：</string>
+    <string name="congrat">恭喜！你尝试了：</string>
+    <string name="message">你尝试了：</string>
+    <string name="restart">重新开始</string>
+    <string name="gohome">回到主页</string>
+    <string name="Rhino">犀牛配对！</string>
+    <string name="fox">狐狸配对！</string>
+    <string name="raccoon">浣熊配对！</string>
+    <string name="bear">棕熊配对！</string>
+    <string name="kangaroo">袋鼠配对！</string>
+    <string name="leopard">豹子配对！</string>
+    <string name="snake">蟒蛇配对！</string>
+    <string name="elephant">大象配对！</string>
+    <string name="hippo">河马配对！</string>
+    <string name="moose">麋鹿配对！</string>
+    <string name="crocodile">鳄鱼配对！</string>
+    <string name="wolf">野狼配对！</string>
+    <string name="tiger">老虎配对！</string>
+    <string name="gorilla">猩猩配对！</string>
+    <string name="parrot">鹦鹉配对！</string>
+    <string name="turkey">火鸡配对！</string>
+    <string name="eagle">老鹰配对！</string>
+    <string name="ape">猿猴配对！</string>
+    <string name="monkey">猴子配对！</string>
+    <string name="frog">青蛙配对！</string>
+    <string name="bat">蝙蝠配对！</string>
+    <string name="lion">狮子配对！</string>
+    <string name="hedgehog">刺猬配对！</string>
+    <string name="owl">猫头鹰配对！</string>
+    <string name="lizard">蜥蜴配对！</string>
+    <string name="porcupine">豪猪配对！</string>
+    <string name="guineapig">豚鼠配对！</string>
+    <string name="bird">小鸟配对！</string>
+    <string name="cancel">取消</string>
+</resources>

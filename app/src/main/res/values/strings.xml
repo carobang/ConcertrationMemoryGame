@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Noah\'s Ark</string>
+    <string name="start">START</string>
+    <string name="count">COUNT:</string>
+    <string name="congrat">Congrats! You have tried：</string>
+    <string name="message">You have tried:</string>
+    <string name="restart">RESTART</string>
+    <string name="cancel">CANCEL</string>
+    <string name="gohome">GO HOME</string>
+
+
+    <string name="Rhino">Rhino Matched!</string>
+    <string name="fox">Fox Matched!</string>
+    <string name="raccoon">Raccoon Matched!</string>
+    <string name="bear">Bear Matched!</string>
+    <string name="kangaroo">Kangaroo Matched!</string>
+    <string name="leopard">Leopard Matched!</string>
+    <string name="snake">Snake Matched!</string>
+    <string name="elephant">Elephant Matched!</string>
+    <string name="hippo">Hippo Matched!</string>
+    <string name="moose">Moose Matched!</string>
+    <string name="crocodile">Crocodile Matched!</string>
+    <string name="wolf">Wolf Matched!</string>
+    <string name="tiger">Tiger Matched!</string>
+    <string name="gorilla">Gorilla Matched!</string>
+    <string name="bird">Bird Matched!</string>
+    <string name="parrot">Parrot Matched!</string>
+    <string name="turkey">Turkey Matched!</string>
+    <string name="eagle">Eagle Matched!</string>
+    <string name="ape">Ape Matched!</string>
+    <string name="monkey">Monkey Matched!</string>
+    <string name="frog">Frog Matched!</string>
+    <string name="lion">Lion Matched!</string>
+    <string name="bat">Bat Matched!</string>
+    <string name="hedgehog">Hedgehog Matched!</string>
+    <string name="owl">Owl Matched!</string>
+    <string name="lizard">Lizard Matched!</string>
+    <string name="porcupine">Porcupine Matched!</string>
+    <string name="guineapig">Guinea Pig Matched!</string>
+
+</resources>

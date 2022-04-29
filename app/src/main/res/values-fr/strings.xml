@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Noah\'s Ark</string>
+    <string name="start">DÉMARRER</string>
+    <string name="count">COMPTER:</string>
+    <string name="congrat">Bravo! Vous avez essayé:</string>
+    <string name="message">" Vous avez essayé:"</string>
+    <string name="restart">REDÉMARRER</string>
+    <string name="gohome">RENTRER CHEZ SOI</string>
+    <string name="Rhino">Rhino assorti!</string>
+    <string name="fox">Renard assorti!</string>
+    <string name="raccoon">Raton laveur assorti!</string>
+    <string name="bear">Ours assorti!</string>
+    <string name="kangaroo">Kangourou apparié!</string>
+    <string name="leopard">Léopard assorti!</string>
+    <string name="snake">Serpent assorti!</string>
+    <string name="elephant">Éléphant assorti!</string>
+    <string name="hippo">Hippopotame assorti!</string>
+    <string name="moose">Moose apparié!</string>
+    <string name="crocodile">Crocodile assorti!</string>
+    <string name="wolf">Loup apparié!</string>
+    <string name="tiger">Tigre assorti!</string>
+    <string name="gorilla">Gorille assorti!</string>
+    <string name="bird">Oiseau assorti!</string>
+    <string name="parrot">Perroquet assorti!</string>
+    <string name="turkey">La Turquie assortie!</string>
+    <string name="eagle">Aigle assorti!</string>
+    <string name="ape">Singe assorti!</string>
+    <string name="monkey">Singe assorti!</string>
+    <string name="frog">Grenouille assortie!</string>
+    <string name="bat">Chauve-souris assortie!</string>
+    <string name="lion">Lion apparié!</string>
+    <string name="hedgehog">Hérisson assorti！</string>
+    <string name="owl">Hibou assorti！</string>
+    <string name="lizard">Lézard assorti！</string>
+    <string name="porcupine">Porc-épic apparié！</string>
+    <string name="guineapig">Cochon d\'Inde apparié！</string>
+    <string name="cancel">" ANNULER"</string>
+</resources>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="yy.example.concertrationmemorygame.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:backgroundTintMode="screen"
+        tools:context=".GameActivity">
+
+        <LinearLayout
+            android:id="@+id/GameLinearLayoutTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/GameTextViewCount"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/count"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/GameTextViewCountScore"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{String.valueOf(viewModel.count)}"
+                android:textAlignment="textStart"
+                android:textColor="@color/purple_500" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/GameDividerHorizonZero"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameLinearLayoutTop" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton00"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameImageButton10"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton01"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonOne"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton02"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonOne"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton03"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_weight="0"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonOne"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero"
+            app:srcCompat="@drawable/card_back" />
+
+        <View
+            android:id="@+id/GameDividerHorizonOne"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="90dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton10"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonOne"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton11"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonOne"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton12"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonOne"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton13"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonOne"
+            app:srcCompat="@drawable/card_back" />
+
+        <View
+            android:id="@+id/GameDividerHorizonTwo"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonOne" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton20"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonThree"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonTwo"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton21"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonThree"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonTwo"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton22"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonThree"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonTwo"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton23"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonThree"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonTwo"
+            app:srcCompat="@drawable/card_back" />
+
+        <View
+            android:id="@+id/GameDividerHorizonThree"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonTwo" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton30"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFour"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonThree"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton31"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFour"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonThree"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton32"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFour"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonThree"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton33"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFour"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonThree"
+            app:srcCompat="@drawable/card_back"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <View
+            android:id="@+id/GameDividerHorizonFour"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonThree" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton40"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFive"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFour"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton41"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFive"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFour"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton42"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFive"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFour"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton43"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonFive"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFour"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/card_back" />
+
+        <View
+            android:id="@+id/GameDividerHorizonFive"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFour" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton50"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonSix"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintStart_toEndOf="@+id/GameIDividerVerticalZero"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFive"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton51"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonSix"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFive"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton52"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonSix"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFive"
+            app:srcCompat="@drawable/card_back" />
+
+        <ImageButton
+            android:id="@+id/GameImageButton53"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:backgroundTintMode="add"
+            android:onClick="onCardButtonClick"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/GameDividerHorizonSix"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalFour"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFive"
+            app:srcCompat="@drawable/card_back" />
+
+        <View
+            android:id="@+id/GameDividerHorizonSix"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonFive" />
+
+        <View
+            android:id="@+id/GameIDividerVerticalZero"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:layout_marginEnd="90dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalOne"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonZero" />
+
+        <View
+            android:id="@+id/GameDividerVerticalOne"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:layout_marginEnd="90dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameLinearLayoutTop" />
+
+        <View
+            android:id="@+id/GameDividerVerticalTwo"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameLinearLayoutTop" />
+
+        <View
+            android:id="@+id/GameDividerVerticalThree"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:layout_marginStart="90dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalTwo"
+            app:layout_constraintTop_toBottomOf="@+id/GameLinearLayoutTop" />
+
+        <View
+            android:id="@+id/GameDividerVerticalFour"
+            android:layout_width="1dp"
+            android:layout_height="729dp"
+            android:layout_marginStart="90dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/GameDividerVerticalThree"
+            app:layout_constraintTop_toBottomOf="@+id/GameLinearLayoutTop" />
+
+        <TextView
+            android:id="@+id/GameTextViewNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GameDividerHorizonSix" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
